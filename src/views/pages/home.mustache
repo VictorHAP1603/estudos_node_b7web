@@ -1,0 +1,29 @@
+{{>partials/header}}
+
+  {{#maiorDeIdade}}
+  <h2>Você é maior de idade</h2>
+  {{/maiorDeIdade}}
+
+  {{^maiorDeIdade}}
+  <h2>Você é menor de idade</h2>
+  {{/maiorDeIdade}}
+
+  <hr>
+
+  <h2>Produtos</h2>
+
+  <ul>
+  {{#products}}
+    {{>partials/productItem}}
+    {{! <li>{{.}} {{ !</li>  }}
+  {{/products}}
+
+  {{^products}}
+    <h1>Não tem produtos</h1>
+  {{/products}}
+
+  </ul>
+
+{{>partials/footer}}
+
+
